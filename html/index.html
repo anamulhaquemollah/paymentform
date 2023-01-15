@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Payment form</title>
+  </head>
+  <body>
+    <div class="container">
+      <form>
+        <div class="payment_method">
+          <h2>Payment information</h2>
+          <h4>Select a Payment Method</h4>
+          <div class="payment_option">
+            <div>
+              <input
+                type="radio"
+                id="creditOrDebit"
+                name="payment_option"
+                value="creditOrDebit"
+              />
+              <label for="creditOrDebit"
+                >Credit Or Debit Card <br />
+                <img
+                  class="payment_option-image"
+                  src="../assets/debitcredit.jpg"
+                  alt=""
+              /></label>
+            </div>
+
+            <div>
+              <input
+                type="radio"
+                id="paypal"
+                name="payment_option"
+                value="paypal"
+              />
+               
+              <label for="paypal"
+                ><img class="paypal_icon" src="../assets/paypal.png" alt=""
+              /></label>
+            </div>
+          </div>
+        </div>
+        <hr class="gap" />
+
+        <div class="card_details">
+          <div class="card_details-title">
+            <h2>Add Card Details</h2>
+            <p>Secure server</p>
+          </div>
+
+          <div class="name_and_number">
+            <input type="text" placeholder="Name on Card" /> <br />
+            <input type="text" placeholder="Card number" />
+          </div>
+
+          <div class="expire_security">
+            <input type="text" placeholder="Expire date(MM/YY" />
+            <input type="text" placeholder="Security code" /> <br />
+
+            <input type="text" placeholder="Postal or zip code" />
+            <!-- <input type="text" placeholder="Billing Country:" /> -->
+            <select name="cars" id="cars" required>
+              <option value="" disabled selected>Billing Country</option>
+              <option value="bangladesh">Bangladesh</option>
+              <option value="india">India</option>
+              <option value="usa">USA</option>
+              <option value="dubai">Dubai</option>
+            </select>
+          </div>
+          <div class="billing_country">
+            <input type="checkbox" id="billcountry" />
+            <label for="billcountry"
+              >Billing country is the same as my home.</label
+            >
+          </div>
+        </div>
+
+        <hr class="gap" />
+        <div class="promo_code">
+          <h3>Promotion Code</h3>
+          <h5><a href="#">Apply a promo code</a></h5>
+        </div>
+        <hr class="gap" />
+
+        <button class="submit_button">Complete Payment</button>
+      </form>
+    </div>
+  </body>
+</html>
